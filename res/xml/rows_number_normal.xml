@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/*
+**
+** Copyright 2012, The Android Open Source Project
+**
+** Licensed under the Apache License, Version 2.0 (the "License");
+** you may not use this file except in compliance with the License.
+** You may obtain a copy of the License at
+**
+**     http://www.apache.org/licenses/LICENSE-2.0
+**
+** Unless required by applicable law or agreed to in writing, software
+** distributed under the License is distributed on an "AS IS" BASIS,
+** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+** See the License for the specific language governing permissions and
+** limitations under the License.
+*/
+-->
+
+<merge
+    xmlns:soft="http://schemas.android.com/apk/res/com.androidtweak.inputmethod.myanmar"
+>
+    <Row>
+        <Key
+            soft:keyLabel="1"
+            soft:keyStyle="numKeyStyle" />
+        <Key
+            soft:keyLabel="2"
+            soft:keyStyle="numKeyStyle" />
+        <Key
+            soft:keyLabel="3"
+            soft:keyStyle="numKeyStyle" />
+        <Key
+            soft:keyLabel="-"
+            soft:keyStyle="numFunctionalKeyStyle"
+            soft:keyWidth="fillRight" />
+    </Row>
+    <Row>
+        <Key
+            soft:keyLabel="4"
+            soft:keyStyle="numKeyStyle" />
+        <Key
+            soft:keyLabel="5"
+            soft:keyStyle="numKeyStyle" />
+        <Key
+            soft:keyLabel="6"
+            soft:keyStyle="numKeyStyle" />
+        <switch>
+            <case
+                soft:mode="date"
+            >
+                <Key
+                    soft:keyLabel="."
+                    soft:keyStyle="numFunctionalKeyStyle"
+                    soft:keyWidth="fillRight" />
+            </case>
+            <case
+                soft:mode="time|datetime"
+            >
+                <Key
+                    soft:keyLabel="."
+                    soft:keyLabelFlags="hasPopupHint"
+                    soft:moreKeys="!text/more_keys_for_am_pm"
+                    soft:keyStyle="numFunctionalKeyStyle"
+                    soft:keyWidth="fillRight" />
+            </case>
+            <default>
+                <Key
+                    soft:keyLabel=","
+                    soft:keyStyle="numFunctionalKeyStyle"
+                    soft:keyWidth="fillRight" />
+            </default>
+        </switch>
+    </Row>
+    <Row>
+        <Key
+            soft:keyLabel="7"
+            soft:keyStyle="numKeyStyle" />
+        <Key
+            soft:keyLabel="8"
+            soft:keyStyle="numKeyStyle"/>
+        <Key
+            soft:keyLabel="9"
+            soft:keyStyle="numKeyStyle" />
+        <Key
+            soft:keyStyle="deleteKeyStyle"
+            soft:keyWidth="fillRight" />
+    </Row>
+    <Row>
+        <Key
+            soft:keyStyle="numSpaceKeyStyle" />
+        <Key
+            soft:keyLabel="0"
+            soft:keyStyle="numKeyStyle" />
+        <switch>
+            <case
+                soft:mode="date"
+            >
+                <Key
+                    soft:keyLabel="/"
+                    soft:keyStyle="numKeyStyle" />
+            </case>
+            <case
+                soft:mode="time"
+            >
+                <Key
+                    soft:keyLabel=":"
+                    soft:keyStyle="numKeyStyle" />
+            </case>
+            <case
+                soft:mode="datetime"
+            >
+                <!-- U+002F: "/" SOLIDUS -->
+                <Key
+                    soft:code="0x002F"
+                    soft:keyLabel="/ :"
+                    soft:moreKeys="!embeddedMoreKey!,:"
+                    soft:keyStyle="numKeyStyle" />
+            </case>
+            <default>
+                <Key
+                    soft:keyLabel="."
+                    soft:keyStyle="numKeyStyle" />
+            </default>
+        </switch>
+        <Key
+            soft:keyStyle="enterKeyStyle"
+            soft:keyWidth="fillRight" />
+    </Row>
+</merge>

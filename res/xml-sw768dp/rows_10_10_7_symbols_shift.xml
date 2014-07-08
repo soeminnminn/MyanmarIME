@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/*
+**
+** Copyright 2012, The Android Open Source Project
+**
+** Licensed under the Apache License, Version 2.0 (the "License");
+** you may not use this file except in compliance with the License.
+** You may obtain a copy of the License at
+**
+**     http://www.apache.org/licenses/LICENSE-2.0
+**
+** Unless required by applicable law or agreed to in writing, software
+** distributed under the License is distributed on an "AS IS" BASIS,
+** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+** See the License for the specific language governing permissions and
+** limitations under the License.
+*/
+-->
+
+<merge
+    xmlns:soft="http://schemas.android.com/apk/res/com.androidtweak.inputmethod.myanmar"
+>
+    <include
+        soft:keyboardLayout="@xml/key_styles_common" />
+    <include
+        soft:keyboardLayout="@xml/key_styles_currency" />
+    <Row
+        soft:keyWidth="8.282%p"
+    >
+        <Key
+            soft:keyStyle="tabKeyStyle"
+            soft:keyLabelFlags="alignLeft"
+            soft:keyWidth="7.969%p" />
+        <include
+            soft:keyboardLayout="@xml/rowkeys_symbols_shift1" />
+        <Key
+            soft:keyStyle="deleteKeyStyle"
+            soft:keyWidth="fillRight" />
+    </Row>
+    <Row
+        soft:keyWidth="8.125%p"
+    >
+        <Key
+            soft:keyStyle="toAlphaKeyStyle"
+            soft:keyLabelFlags="alignLeft"
+            soft:keyWidth="10.167%p" />
+        <include
+            soft:keyboardLayout="@xml/rowkeys_symbols_shift2" />
+        <Key
+            soft:keyStyle="enterKeyStyle"
+            soft:keyWidth="fillRight" />
+    </Row>
+    <Row
+        soft:keyWidth="8.047%p"
+    >
+        <Key
+            soft:keyStyle="backFromMoreSymbolKeyStyle"
+            soft:keyWidth="13.829%p" />
+        <include
+            soft:keyboardLayout="@xml/rowkeys_symbols_shift3" />
+        <Key
+            soft:keyStyle="backFromMoreSymbolKeyStyle"
+            soft:keyXPos="-13.750%p"
+            soft:keyWidth="fillRight" />
+    </Row>
+    <include
+        soft:keyboardLayout="@xml/row_symbols_shift4" />
+</merge>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/*
+**
+** Copyright 2012, Jishnu Mohan <jishnu7@gmail.com>
+**
+** Licensed under the Apache License, Version 2.0 (the "License");
+** you may not use this file except in compliance with the License.
+** You may obtain a copy of the License at
+**
+**     http://www.apache.org/licenses/LICENSE-2.0
+**
+** Unless required by applicable law or agreed to in writing, software
+** distributed under the License is distributed on an "AS IS" BASIS,
+** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+** See the License for the specific language governing permissions and
+** limitations under the License.
+*/
+-->
+
+<merge
+    xmlns:soft="http://schemas.android.com/apk/res/com.androidtweak.inputmethod.myanmar"
+>
+    <switch>
+        <case soft:keyboardLayoutSetElement="alphabetManualShifted|alphabetShiftLocked|alphabetShiftLockShifted"
+        >
+            <Key
+                soft:keyLabel="ဟ" />
+            <Key
+                soft:keyLabel="ဂ"
+                soft:moreKeys="&#x1062;" />
+            <Key
+                soft:keyLabel="ႏ" />
+            <Key
+                soft:keyLabel="ဃ"
+                soft:moreKeys="&#x1063;" />
+            <Key
+                soft:keyLabel="ဥ"
+                soft:moreKeys="&#x106A;,&#x1026;" />
+            <Key
+                soft:keyLabel="&#x1094;" />
+            <Key
+                soft:keyLabel="&#x1095;" />
+            <Key
+                soft:keyLabel="ဏ"
+                soft:moreKeys="&#x1070;" />
+            <Key
+                soft:keyLabel="ႆ" />
+            <Key
+                soft:keyLabel="ရ"
+                soft:moreKeys="&#x1090;" />
+        </case>
+
+        <default>
+            <Key
+                soft:keyLabel="ဆ"
+                soft:moreKeys="&#x1066;,&#x1067;" />
+            <Key
+                soft:keyLabel="တ"
+				soft:moreKeys="&#x1071;,&#x1072;,&#x1096;" />
+            <Key
+                soft:keyLabel="န"
+                soft:moreKeys="&#x108F;,&#x1077;" />
+            <Key
+                soft:keyLabel="မ"
+                soft:moreKeys="&#x107C;" />
+            <Key
+                soft:keyLabel="အ" />
+            <Key
+                soft:keyLabel="ပ"
+                soft:moreKeys="&#x1078;" />
+            <Key
+                soft:keyLabel="က"
+                soft:moreKeys="&#x1060;" />
+            <Key
+                soft:keyLabel="င" />
+            <Key
+                soft:keyLabel="သ"
+				soft:popupTemplate="@xml/kbd_more_keys_keyboard_template_w"
+                soft:moreKeys="&#x1086;,&#x1029;,&#x102A;" />
+            <Key
+                soft:keyLabel="စ"
+                soft:moreKeys="&#x1065;" />
+         </default>
+    </switch>
+</merge>

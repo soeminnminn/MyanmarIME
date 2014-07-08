@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/*
+**
+** Copyright 2012, The Android Open Source Project
+**
+** Licensed under the Apache License, Version 2.0 (the "License");
+** you may not use this file except in compliance with the License.
+** You may obtain a copy of the License at
+**
+**     http://www.apache.org/licenses/LICENSE-2.0
+**
+** Unless required by applicable law or agreed to in writing, software
+** distributed under the License is distributed on an "AS IS" BASIS,
+** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+** See the License for the specific language governing permissions and
+** limitations under the License.
+*/
+-->
+
+<merge
+    xmlns:soft="http://schemas.android.com/apk/res/com.androidtweak.inputmethod.myanmar"
+>
+    <Key
+        soft:keyLabel="!text/keylabel_for_symbols_1"
+        soft:additionalMoreKeys="!text/additional_more_keys_for_symbols_1"
+        soft:moreKeys="!text/more_keys_for_symbols_1" />
+    <Key
+        soft:keyLabel="!text/keylabel_for_symbols_2"
+        soft:additionalMoreKeys="!text/additional_more_keys_for_symbols_2"
+        soft:moreKeys="!text/more_keys_for_symbols_2" />
+    <Key
+        soft:keyLabel="!text/keylabel_for_symbols_3"
+        soft:additionalMoreKeys="!text/additional_more_keys_for_symbols_3"
+        soft:moreKeys="!text/more_keys_for_symbols_3" />
+    <Key
+        soft:keyLabel="!text/keylabel_for_symbols_4"
+        soft:additionalMoreKeys="!text/additional_more_keys_for_symbols_4"
+        soft:moreKeys="!text/more_keys_for_symbols_4" />
+    <Key
+        soft:keyLabel="!text/keylabel_for_symbols_5"
+        soft:additionalMoreKeys="!text/additional_more_keys_for_symbols_5"
+        soft:moreKeys="!text/more_keys_for_symbols_5" />
+    <Key
+        soft:keyLabel="!text/keylabel_for_symbols_6"
+        soft:additionalMoreKeys="!text/additional_more_keys_for_symbols_6"
+        soft:moreKeys="!text/more_keys_for_symbols_6" />
+    <Key
+        soft:keyLabel="!text/keylabel_for_symbols_7"
+        soft:additionalMoreKeys="!text/additional_more_keys_for_symbols_7"
+        soft:moreKeys="!text/more_keys_for_symbols_7" />
+    <Key
+        soft:keyLabel="!text/keylabel_for_symbols_8"
+        soft:additionalMoreKeys="!text/additional_more_keys_for_symbols_8"
+        soft:moreKeys="!text/more_keys_for_symbols_8" />
+    <Key
+        soft:keyLabel="!text/keylabel_for_symbols_9"
+        soft:additionalMoreKeys="!text/additional_more_keys_for_symbols_9"
+        soft:moreKeys="!text/more_keys_for_symbols_9" />
+    <Key
+        soft:keyLabel="!text/keylabel_for_symbols_0"
+        soft:additionalMoreKeys="!text/additional_more_keys_for_symbols_0"
+        soft:moreKeys="!text/more_keys_for_symbols_0" />
+</merge>

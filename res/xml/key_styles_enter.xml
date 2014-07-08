@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/*
+**
+** Copyright 2012, The Android Open Source Project
+**
+** Licensed under the Apache License, Version 2.0 (the "License");
+** you may not use this file except in compliance with the License.
+** You may obtain a copy of the License at
+**
+**     http://www.apache.org/licenses/LICENSE-2.0
+**
+** Unless required by applicable law or agreed to in writing, software
+** distributed under the License is distributed on an "AS IS" BASIS,
+** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+** See the License for the specific language governing permissions and
+** limitations under the License.
+*/
+-->
+
+<merge
+    xmlns:soft="http://schemas.android.com/apk/res/com.androidtweak.inputmethod.myanmar"
+>
+    <!-- Navigate more keys style -->
+    <switch>
+        <case
+            soft:imeAction="actionNext"
+            soft:navigatePrevious="true"
+        >
+            <key-style
+                soft:styleName="navigateMoreKeysStyle"
+                soft:keyLabelFlags="hasPopupHint|preserveCase"
+                soft:moreKeys="!text/action_previous_as_more_key" />
+        </case>
+        <case
+            soft:imeAction="actionNext"
+            soft:navigatePrevious="false"
+        >
+            <key-style
+                soft:styleName="navigateMoreKeysStyle" />
+        </case>
+        <case
+            soft:imeAction="actionPrevious"
+            soft:navigateNext="true"
+        >
+            <key-style
+                soft:styleName="navigateMoreKeysStyle"
+                soft:keyLabelFlags="hasPopupHint|preserveCase"
+                soft:moreKeys="!text/action_next_as_more_key" />
+        </case>
+        <case
+            soft:imeAction="actionPrevious"
+            soft:navigateNext="false"
+        >
+            <key-style
+                soft:styleName="navigateMoreKeysStyle" />
+        </case>
+        <!-- imeAction!="actionNext" and imeAction!="actionPrevious" -->
+        <case
+            soft:navigateNext="true"
+            soft:navigatePrevious="true"
+        >
+            <key-style
+                soft:styleName="navigateMoreKeysStyle"
+                soft:keyLabelFlags="hasPopupHint|preserveCase"
+                soft:moreKeys="!fixedColumnOrder!2,!needsDividers!,!text/action_previous_as_more_key,!text/action_next_as_more_key" />
+        </case>
+        <case
+            soft:navigateNext="true"
+            soft:navigatePrevious="false"
+        >
+            <key-style
+                soft:styleName="navigateMoreKeysStyle"
+                soft:keyLabelFlags="hasPopupHint|preserveCase"
+                soft:moreKeys="!text/action_next_as_more_key" />
+        </case>
+        <case
+            soft:navigateNext="false"
+            soft:navigatePrevious="true"
+        >
+            <key-style
+                soft:styleName="navigateMoreKeysStyle"
+                soft:keyLabelFlags="hasPopupHint|preserveCase"
+                soft:moreKeys="!text/action_previous_as_more_key" />
+        </case>
+        <!-- naviagteNext="false" and navigatePrevious="false" -->
+        <default>
+            <key-style
+                soft:styleName="navigateMoreKeysStyle" />
+        </default>
+    </switch>
+    <!-- Enter key style -->
+    <key-style
+        soft:styleName="defaultEnterKeyStyle"
+        soft:code="!code/key_enter"
+        soft:keyIcon="!icon/enter_key"
+        soft:keyLabelFlags="preserveCase|autoXScale|followKeyLabelRatio"
+        soft:keyActionFlags="noKeyPreview"
+        soft:backgroundType="functional"
+        soft:parentStyle="navigateMoreKeysStyle" />
+    <key-style
+        soft:styleName="defaultActionKeyStyle"
+        soft:code="!code/key_action_enter"
+        soft:keyIcon="!icon/undefined"
+        soft:backgroundType="action"
+        soft:parentStyle="defaultEnterKeyStyle" />
+    <switch>
+        <!-- Shift + Enter in textMultiLine field. -->
+        <case
+            soft:isMultiLine="true"
+            soft:keyboardLayoutSetElement="alphabetManualShifted|alphabetShiftLockShifted"
+        >
+            <key-style
+                soft:styleName="enterKeyStyle"
+                soft:parentStyle="defaultEnterKeyStyle" />
+        </case>
+        <case
+            soft:imeAction="actionGo"
+        >
+            <key-style
+                soft:styleName="enterKeyStyle"
+                soft:keyLabel="!text/label_go_key"
+                soft:parentStyle="defaultActionKeyStyle" />
+        </case>
+        <case
+            soft:imeAction="actionNext"
+        >
+            <key-style
+                soft:styleName="enterKeyStyle"
+                soft:keyLabel="!text/label_next_key"
+                soft:parentStyle="defaultActionKeyStyle" />
+        </case>
+        <case
+            soft:imeAction="actionPrevious"
+        >
+            <key-style
+                soft:styleName="enterKeyStyle"
+                soft:keyLabel="!text/label_previous_key"
+                soft:parentStyle="defaultActionKeyStyle" />
+        </case>
+        <case
+            soft:imeAction="actionDone"
+        >
+            <key-style
+                soft:styleName="enterKeyStyle"
+                soft:keyLabel="!text/label_done_key"
+                soft:parentStyle="defaultActionKeyStyle" />
+        </case>
+        <case
+            soft:imeAction="actionSend"
+        >
+            <key-style
+                soft:styleName="enterKeyStyle"
+                soft:keyLabel="!text/label_send_key"
+                soft:parentStyle="defaultActionKeyStyle" />
+        </case>
+        <case
+            soft:imeAction="actionSearch"
+        >
+            <key-style
+                soft:styleName="enterKeyStyle"
+                soft:keyIcon="!icon/search_key"
+                soft:parentStyle="defaultActionKeyStyle" />
+        </case>
+        <case
+            soft:imeAction="actionCustomLabel"
+        >
+            <key-style
+                soft:styleName="enterKeyStyle"
+                soft:keyLabelFlags="fromCustomActionLabel"
+                soft:parentStyle="defaultActionKeyStyle" />
+        </case>
+        <!-- imeAction is either actionNone or actionUnspecified. -->
+        <default>
+            <key-style
+                soft:styleName="enterKeyStyle"
+                soft:parentStyle="defaultEnterKeyStyle" />
+        </default>
+    </switch>
+</merge>

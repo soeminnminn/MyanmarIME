@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/*
+**
+** Copyright 2010, The Android Open Source Project
+**
+** Licensed under the Apache License, Version 2.0 (the "License");
+** you may not use this file except in compliance with the License.
+** You may obtain a copy of the License at
+**
+**     http://www.apache.org/licenses/LICENSE-2.0
+**
+** Unless required by applicable law or agreed to in writing, software
+** distributed under the License is distributed on an "AS IS" BASIS,
+** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+** See the License for the specific language governing permissions and
+** limitations under the License.
+*/
+-->
+
+<merge
+    xmlns:soft="http://schemas.android.com/apk/res/com.androidtweak.inputmethod.myanmar"
+>
+    <switch>
+        <case
+            soft:keyboardLayoutSetElement="alphabetManualShifted|alphabetShiftLockShifted"
+        >
+            <key-style
+                soft:styleName="hasShiftedLetterHintStyle"
+                soft:keyLabelFlags="hasShiftedLetterHint|shiftedLetterActivated" />
+        </case>
+        <default>
+            <key-style
+                soft:styleName="hasShiftedLetterHintStyle"
+                soft:keyLabelFlags="hasShiftedLetterHint" />
+        </default>
+    </switch>
+    <switch>
+        <case
+            soft:keyboardLayoutSetElement="alphabetManualShifted|alphabetAutomaticShifted"
+        >
+            <key-style
+                soft:styleName="shiftKeyStyle"
+                soft:code="!code/key_shift"
+                soft:keyIcon="!icon/shift_key_shifted"
+                soft:keyActionFlags="noKeyPreview"
+                soft:backgroundType="stickyOff" />
+        </case>
+        <case
+            soft:keyboardLayoutSetElement="alphabetShiftLocked|alphabetShiftLockShifted"
+        >
+            <key-style
+                soft:styleName="shiftKeyStyle"
+                soft:code="!code/key_shift"
+                soft:keyIcon="!icon/shift_key_shifted"
+                soft:keyActionFlags="noKeyPreview"
+                soft:backgroundType="stickyOn" />
+        </case>
+        <default>
+            <key-style
+                soft:styleName="shiftKeyStyle"
+                soft:code="!code/key_shift"
+                soft:keyIcon="!icon/shift_key"
+                soft:keyActionFlags="noKeyPreview"
+                soft:backgroundType="stickyOff" />
+        </default>
+    </switch>
+    <switch>
+        <case
+            soft:keyboardLayoutSetElement="alphabetManualShifted|alphabetShiftLocked|alphabetShiftLockShifted"
+        >
+            <key-style
+                soft:styleName="toggleShiftKeyStyle"
+                soft:code="!code/key_shift"
+                soft:keyIcon="!icon/shift_key_shifted"
+                soft:keyActionFlags="noKeyPreview"
+                soft:backgroundType="functional" />
+        </case>
+        <default>
+            <key-style
+                soft:styleName="toggleShiftKeyStyle"
+                soft:code="!code/key_shift"
+                soft:keyIcon="!icon/shift_key"
+                soft:keyActionFlags="noKeyPreview"
+                soft:backgroundType="functional" />
+        </default>
+    </switch>
+    <key-style
+        soft:styleName="deleteKeyStyle"
+        soft:code="!code/key_delete"
+        soft:keyIcon="!icon/delete_key"
+        soft:keyActionFlags="isRepeatable|noKeyPreview"
+        soft:backgroundType="functional" />
+    <include
+        soft:keyboardLayout="@xml/key_styles_enter" />
+    <key-style
+        soft:styleName="spaceKeyStyle"
+        soft:code="!code/key_space"
+        soft:keyActionFlags="noKeyPreview" />
+    <!-- U+200C: ZERO WIDTH NON-JOINER
+         U+200D: ZERO WIDTH JOINER -->
+    <key-style
+        soft:styleName="zwnjKeyStyle"
+        soft:code="0x200C"
+        soft:keyIcon="!icon/zwnj_key"
+        soft:moreKeys="!icon/zwj_key|&#x200D;"
+        soft:keyLabelFlags="hasPopupHint"
+        soft:keyActionFlags="noKeyPreview" />
+    <key-style
+        soft:styleName="smileyKeyStyle"
+        soft:keyLabel=":-)"
+        soft:keyOutputText=":-) "
+        soft:keyLabelFlags="hasPopupHint|preserveCase"
+        soft:moreKeys="!text/more_keys_for_smiley" />
+    <key-style
+        soft:styleName="shortcutKeyStyle"
+        soft:code="!code/key_shortcut"
+        soft:keyIcon="!icon/shortcut_key"
+        soft:keyIconDisabled="!icon/shortcut_key_disabled"
+        soft:keyActionFlags="noKeyPreview"
+        soft:backgroundType="functional" />
+    <key-style
+        soft:styleName="settingsKeyStyle"
+        soft:code="!code/key_settings"
+        soft:keyIcon="!icon/settings_key"
+        soft:keyActionFlags="noKeyPreview"
+        soft:backgroundType="functional" />
+    <switch>
+        <case
+            soft:keyboardLayoutSetElement="alphabetManualShifted|alphabetShiftLockShifted"
+            soft:navigatePrevious="true"
+        >
+            <key-style
+                soft:styleName="tabKeyStyle"
+                soft:code="!code/key_action_previous"
+                soft:keyLabel="!text/label_tab_key"
+                soft:keyLabelFlags="fontNormal|preserveCase"
+                soft:backgroundType="functional" />
+        </case>
+        <default>
+            <key-style
+                soft:styleName="tabKeyStyle"
+                soft:code="!code/key_tab"
+                soft:keyLabel="!text/label_tab_key"
+                soft:keyLabelFlags="fontNormal|preserveCase"
+                soft:backgroundType="functional" />
+        </default>
+    </switch>
+    <key-style
+        soft:styleName="toSymbolKeyStyle"
+        soft:code="!code/key_switch_alpha_symbol"
+        soft:keyLabel="!text/label_to_symbol_key"
+        soft:keyLabelFlags="fontNormal|preserveCase"
+        soft:keyActionFlags="noKeyPreview"
+        soft:backgroundType="functional" />
+    <key-style
+        soft:styleName="toAlphaKeyStyle"
+        soft:code="!code/key_switch_alpha_symbol"
+        soft:keyLabel="!text/label_to_alpha_key"
+        soft:keyLabelFlags="fontNormal|preserveCase"
+        soft:keyActionFlags="noKeyPreview"
+        soft:backgroundType="functional" />
+    <key-style
+        soft:styleName="toMoreSymbolKeyStyle"
+        soft:code="!code/key_shift"
+        soft:keyLabel="!text/label_to_more_symbol_for_tablet_key"
+        soft:keyLabelFlags="fontNormal"
+        soft:keyActionFlags="noKeyPreview"
+        soft:backgroundType="functional" />
+    <key-style
+        soft:styleName="backFromMoreSymbolKeyStyle"
+        soft:code="!code/key_shift"
+        soft:keyLabel="!text/label_to_symbol_key"
+        soft:keyLabelFlags="fontNormal"
+        soft:keyActionFlags="noKeyPreview"
+        soft:backgroundType="functional" />
+    <key-style
+        soft:styleName="comKeyStyle"
+        soft:keyLabel="!text/keylabel_for_popular_domain"
+        soft:keyLabelFlags="fontNormal|hasPopupHint|preserveCase"
+        soft:keyOutputText="!text/keylabel_for_popular_domain"
+        soft:moreKeys="!text/more_keys_for_popular_domain" />
+</merge>

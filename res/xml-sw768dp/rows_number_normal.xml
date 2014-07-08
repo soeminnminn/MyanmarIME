@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/*
+**
+** Copyright 2012, The Android Open Source Project
+**
+** Licensed under the Apache License, Version 2.0 (the "License");
+** you may not use this file except in compliance with the License.
+** You may obtain a copy of the License at
+**
+**     http://www.apache.org/licenses/LICENSE-2.0
+**
+** Unless required by applicable law or agreed to in writing, software
+** distributed under the License is distributed on an "AS IS" BASIS,
+** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+** See the License for the specific language governing permissions and
+** limitations under the License.
+*/
+-->
+
+<merge
+    xmlns:soft="http://schemas.android.com/apk/res/com.androidtweak.inputmethod.myanmar"
+>
+    <Row>
+        <Key
+            soft:keyStyle="tabKeyStyle"
+            soft:keyLabelFlags="alignLeft"
+            soft:keyWidth="11.172%p" />
+        <Key
+            soft:keyLabel="-"
+            soft:keyStyle="numKeyStyle"
+            soft:keyXPos="13.829%p"
+            soft:keyWidth="8.047%p"
+            soft:backgroundType="functional" />
+        <Key
+            soft:keyLabel="+"
+            soft:keyStyle="numKeyStyle"
+            soft:keyWidth="8.047%p"
+            soft:backgroundType="functional" />
+        <Key
+            soft:keyLabel="."
+            soft:keyStyle="numKeyStyle"
+            soft:keyWidth="8.047%p"
+            soft:backgroundType="functional" />
+        <Key
+            soft:keyLabel="1"
+            soft:keyStyle="numKeyStyle"
+            soft:keyXPos="43.125%p" />
+        <Key
+            soft:keyLabel="2"
+            soft:keyStyle="numKeyStyle" />
+        <Key
+            soft:keyLabel="3"
+            soft:keyStyle="numKeyStyle" />
+        <Key
+            soft:keyStyle="deleteKeyStyle"
+            soft:keyXPos="-11.172%p"
+            soft:keyWidth="fillRight" />
+    </Row>
+    <Row>
+        <!-- Note: This Spacer prevents the below key from being marked as a left edge key. -->
+        <Spacer
+            soft:keyWidth="13.829%p" />
+        <Key
+            soft:keyStyle="numStarKeyStyle"
+            soft:keyWidth="8.047%p"
+            soft:backgroundType="functional" />
+        <Key
+            soft:keyLabel="/"
+            soft:keyStyle="numKeyStyle"
+            soft:keyWidth="8.047%p"
+            soft:backgroundType="functional" />
+        <switch>
+            <case
+                soft:mode="time|datetime"
+            >
+                <Key
+                    soft:keyLabel=","
+                    soft:keyLabelFlags="hasPopupHint"
+                    soft:moreKeys="!text/more_keys_for_am_pm"
+                    soft:keyStyle="numKeyStyle"
+                    soft:keyWidth="8.047%p"
+                    soft:backgroundType="functional" />
+            </case>
+            <default>
+                <Key
+                    soft:keyLabel=","
+                    soft:keyStyle="numKeyStyle"
+                    soft:keyWidth="8.047%p"
+                    soft:backgroundType="functional" />
+            </default>
+        </switch>
+        <Key
+            soft:keyLabel="4"
+            soft:keyStyle="numKeyStyle"
+            soft:keyXPos="43.125%p" />
+        <Key
+            soft:keyLabel="5"
+            soft:keyStyle="numKeyStyle" />
+        <Key
+            soft:keyLabel="6"
+            soft:keyStyle="numKeyStyle" />
+        <Key
+            soft:keyStyle="enterKeyStyle"
+            soft:keyXPos="-11.172%p"
+            soft:keyWidth="fillRight" />
+    </Row>
+    <Row>
+        <!-- Note: This Spacer prevents the below key from being marked as a left edge key. -->
+        <Spacer
+            soft:keyWidth="13.829%p" />
+        <Key
+            soft:keyLabel="("
+            soft:keyStyle="numKeyStyle"
+            soft:keyWidth="8.047%p"
+            soft:backgroundType="functional" />
+        <Key
+            soft:keyLabel=")"
+            soft:keyStyle="numKeyStyle"
+            soft:keyWidth="8.047%p"
+            soft:backgroundType="functional" />
+        <switch>
+            <case
+                soft:mode="time|datetime"
+            >
+                <Key
+                    soft:keyLabel=":"
+                    soft:keyStyle="numKeyStyle"
+                    soft:keyWidth="8.047%p"
+                    soft:backgroundType="functional" />
+            </case>
+            <default>
+                <Key
+                    soft:keyLabel="="
+                    soft:keyStyle="numKeyStyle"
+                    soft:keyWidth="8.047%p"
+                    soft:backgroundType="functional" />
+            </default>
+        </switch>
+        <Key
+            soft:keyLabel="7"
+            soft:keyStyle="numKeyStyle"
+            soft:keyXPos="43.125%p" />
+        <Key
+            soft:keyLabel="8"
+            soft:keyStyle="numKeyStyle" />
+        <Key
+            soft:keyLabel="9"
+            soft:keyStyle="numKeyStyle" />
+        <!-- Note: This Spacer prevents the above key from being marked as a right edge key. -->
+        <Spacer />
+    </Row>
+    <Row>
+        <include
+            soft:keyboardLayout="@xml/key_settings"
+            soft:keyWidth="8.047%p" />
+        <Key
+            soft:keyStyle="spaceKeyStyle"
+            soft:keyXPos="13.829%p"
+            soft:keyWidth="24.140%p"
+            soft:backgroundType="functional" />
+        <Key
+            soft:keyStyle="numStarKeyStyle"
+            soft:keyXPos="43.125%p" />
+        <Key
+            soft:keyLabel="0"
+            soft:keyStyle="numKeyStyle" />
+        <Key
+            soft:keyLabel="#"
+            soft:keyStyle="numKeyStyle" />
+    </Row>
+</merge>

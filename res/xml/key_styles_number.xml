@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/*
+**
+** Copyright 2010, The Android Open Source Project
+**
+** Licensed under the Apache License, Version 2.0 (the "License");
+** you may not use this file except in compliance with the License.
+** You may obtain a copy of the License at
+**
+**     http://www.apache.org/licenses/LICENSE-2.0
+**
+** Unless required by applicable law or agreed to in writing, software
+** distributed under the License is distributed on an "AS IS" BASIS,
+** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+** See the License for the specific language governing permissions and
+** limitations under the License.
+*/
+-->
+
+<merge
+    xmlns:soft="http://schemas.android.com/apk/res/com.androidtweak.inputmethod.myanmar"
+>
+    <key-style
+        soft:styleName="numKeyBaseStyle"
+        soft:keyActionFlags="noKeyPreview" />
+    <key-style
+        soft:styleName="numKeyStyle"
+        soft:keyLabelFlags="followKeyLargeLetterRatio"
+        soft:parentStyle="numKeyBaseStyle" />
+    <key-style
+        soft:styleName="numModeKeyStyle"
+        soft:keyLabelFlags="fontNormal|followKeyLetterRatio"
+        soft:parentStyle="numKeyBaseStyle" />
+    <key-style
+        soft:styleName="numFunctionalKeyStyle"
+        soft:keyLabelFlags="followKeyLargeLetterRatio"
+        soft:backgroundType="functional"
+        soft:parentStyle="numKeyBaseStyle" />
+    <key-style
+        soft:styleName="numberKeyStyle"
+        soft:keyLabelFlags="alignLeftOfCenter|hasHintLabel"
+        soft:parentStyle="numKeyStyle" />
+    <key-style
+        soft:styleName="num0KeyStyle"
+        soft:keyLabel="0"
+        soft:parentStyle="numberKeyStyle" />
+    <key-style
+        soft:styleName="num1KeyStyle"
+        soft:keyLabel="1"
+        soft:parentStyle="numberKeyStyle" />
+    <key-style
+        soft:styleName="num2KeyStyle"
+        soft:keyLabel="2"
+        soft:keyHintLabel="ABC"
+        soft:parentStyle="numberKeyStyle" />
+    <key-style
+        soft:styleName="num3KeyStyle"
+        soft:keyLabel="3"
+        soft:keyHintLabel="DEF"
+        soft:parentStyle="numberKeyStyle" />
+    <key-style
+        soft:styleName="num4KeyStyle"
+        soft:keyLabel="4"
+        soft:keyHintLabel="GHI"
+        soft:parentStyle="numberKeyStyle" />
+    <key-style
+        soft:styleName="num5KeyStyle"
+        soft:keyLabel="5"
+        soft:keyHintLabel="JKL"
+        soft:parentStyle="numberKeyStyle" />
+    <key-style
+        soft:styleName="num6KeyStyle"
+        soft:keyLabel="6"
+        soft:keyHintLabel="MNO"
+        soft:parentStyle="numberKeyStyle" />
+    <key-style
+        soft:styleName="num7KeyStyle"
+        soft:keyLabel="7"
+        soft:keyHintLabel="PQRS"
+        soft:parentStyle="numberKeyStyle" />
+    <key-style
+        soft:styleName="num8KeyStyle"
+        soft:keyLabel="8"
+        soft:keyHintLabel="TUV"
+        soft:parentStyle="numberKeyStyle" />
+    <key-style
+        soft:styleName="num9KeyStyle"
+        soft:keyLabel="9"
+        soft:keyHintLabel="WXYZ"
+        soft:parentStyle="numberKeyStyle" />
+    <!-- U+002A: "*" ASTERISK
+         U+FF0A: "＊" FULLWIDTH ASTERISK -->
+    <key-style
+        soft:styleName="numStarKeyStyle"
+        soft:code="0x002A"
+        soft:keyLabel="&#xFF0A;"
+        soft:parentStyle="numKeyStyle" />
+    <!-- Only for non-tablet device -->
+    <key-style
+        soft:styleName="numPhoneToSymbolKeyStyle"
+        soft:code="!code/key_switch_alpha_symbol"
+        soft:keyLabel="!text/label_to_phone_symbols_key"
+        soft:parentStyle="numModeKeyStyle" />
+    <key-style
+        soft:styleName="numPhoneToNumericKeyStyle"
+        soft:code="!code/key_switch_alpha_symbol"
+        soft:keyLabel="!text/label_to_phone_numeric_key"
+        soft:parentStyle="numModeKeyStyle" />
+    <!-- U+002C: "," COMMA -->
+    <key-style
+        soft:styleName="numPauseKeyStyle"
+        soft:code="0x002C"
+        soft:keyLabel="!text/label_pause_key"
+        soft:keyLabelFlags="followKeyHintLabelRatio|autoXScale"
+        soft:parentStyle="numKeyBaseStyle" />
+    <!-- U+003B: ";" SEMICOLON -->
+    <key-style
+        soft:styleName="numWaitKeyStyle"
+        soft:code="0x003B"
+        soft:keyLabel="!text/label_wait_key"
+        soft:keyLabelFlags="followKeyHintLabelRatio|autoXScale"
+        soft:parentStyle="numKeyBaseStyle" />
+    <key-style
+        soft:styleName="numTabKeyStyle"
+        soft:keyActionFlags="noKeyPreview"
+        soft:parentStyle="tabKeyStyle" />
+    <key-style
+        soft:styleName="numSpaceKeyStyle"
+        soft:code="!code/key_space"
+        soft:keyIcon="!icon/space_key_for_number_layout"
+        soft:keyActionFlags="enableLongPress"
+        soft:parentStyle="numKeyBaseStyle" />
+    <!-- Override defaultEnterKeyStyle in key_styles_enter.xml -->
+    <key-style
+        soft:styleName="defaultEnterKeyStyle"
+        soft:code="!code/key_enter"
+        soft:keyIcon="!icon/enter_key"
+        soft:keyLabelFlags="preserveCase|autoXScale|followKeyLargeLabelRatio"
+        soft:keyActionFlags="noKeyPreview"
+        soft:backgroundType="functional"
+        soft:parentStyle="navigateMoreKeysStyle" />
+</merge>
